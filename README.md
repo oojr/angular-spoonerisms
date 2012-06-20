@@ -10,7 +10,7 @@ This was an initially a fork from the [angular-seed](https://github.com/angular/
 * `node scripts/web-server.js`
 
 
-Then navigate your browser to `http://localhost:<port>/app/index.html` to 
+Then navigate your browser to `http://localhost:<port>/app/index.html` 
 
 ## Tests
 
