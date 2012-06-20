@@ -42,7 +42,8 @@
         <span class="done-{{spoon.done}}">{{spoon.firstWord}}  {{spoon.secondWord}}</span>
       </li>
     </ul>
-    <form ng-submit="addSpoon()">
+    <div class="span4">
+    <form class="well" ng-submit="addSpoon()">
       <input type="text" ng-model="spoonText"  size="30"
              placeholder="First Word">
      
@@ -50,6 +51,7 @@
              placeholder="Second Word">
       <input class="btn-primary" type="submit" value="add">
     </form>
+  </div>
   </div>
 
 ​
