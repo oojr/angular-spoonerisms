@@ -28,3 +28,5 @@
   content: "";
   padding: 0;
 }
+
+body {background:transparent url(../img/body-bg.png) scroll repeat top left; padding-top:5%;}
