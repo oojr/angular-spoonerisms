@@ -33,8 +33,19 @@
     </div>
 
     <div class="container" ng-app>
-    <div class="row"> 
-  <div ng-controller="SpoonController">
+    <div class="row" ng-controller="SpoonController"> 
+    <div class="span8">
+    <form class="well" ng-submit="addSpoon()">
+      <input type="text" class="input-large" ng-model="spoonText"  
+             placeholder="First Word">
+     
+        <input type="text" class="input-large" ng-model="spoonText2"  
+             placeholder="Second Word">
+      <input class="btn-winter-road-4 btn-xlarge" type="submit" value="spoon">
+    </form>
+  </div>
+    <div class="span4"
+  
     <span>{{spoons.length}} spoonerism(s) made</span>
     [ <a href="" ng-click="archive()">archive</a> ]
     <ul class="unstyled">
@@ -43,18 +54,10 @@
         <span class="done-{{spoon.done}}">{{spoon.firstWord}}  {{spoon.secondWord}}</span>
       </li>
     </ul>
-    <div class="span4">
-    <form class="well" ng-submit="addSpoon()">
-      <input type="text" ng-model="spoonText"  size="30"
-             placeholder="First Word">
-     
-        <input type="text" ng-model="spoonText2"  size="30"
-             placeholder="Second Word">
-      <input class="btn-primary" type="submit" value="add">
-    </form>
-  </div>
+  
+    
 
-  <div class="span6">
+  <div class="span8">
     Level 1 column
     <div class="row">
       <div class="span3">Level 2</div>
@@ -63,7 +66,7 @@
   </div>
 </div>
   </div>
-
+</div>
 
   <script src="js/controllers.js"></script>
   </body>
