@@ -13,60 +13,38 @@
     </style>
   </head>
   <body>
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">Angular Spoonerism</a>
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              
+      
+      <div id="header">
+      </div>
+
+    <div class="container" ng-app>
+      <div class="row" ng-controller="SpoonController"> 
+        <div class="span8">
+          <form class="well" ng-submit="addSpoon()">
+
+            <input type="text" class="input-large" ng-model="spoonText"  
+             placeholder="First Word">
+
+            <input type="text" class="input-large" ng-model="spoonText2"  
+             placeholder="Second Word">
+
+            <input class="btn-winter-road-4 btn-xlarge" type="submit" value="spoon">
+          </form>
+        </div>
+
+        <div class="span4">
+  
+          <span>{{spoons.length}} spoonerism(s) made</span>
+              [ <a href="" ng-click="archive()">archive</a> ]
+            <ul class="unstyled">
+              <li ng-repeat="spoon in spoons">
+                <input type="checkbox" ng-model="spoon.done">
+                <span class="done-{{spoon.done}}">{{spoon.firstWord}}  {{spoon.secondWord}}</span>
+              </li>
             </ul>
-          </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
-
-    <div class="container" ng-app>
-    <div class="row" ng-controller="SpoonController"> 
-    <div class="span8">
-    <form class="well" ng-submit="addSpoon()">
-      <input type="text" class="input-large" ng-model="spoonText"  
-             placeholder="First Word">
-     
-        <input type="text" class="input-large" ng-model="spoonText2"  
-             placeholder="Second Word">
-      <input class="btn-winter-road-4 btn-xlarge" type="submit" value="spoon">
-    </form>
-  </div>
-    <div class="span4"
-  
-    <span>{{spoons.length}} spoonerism(s) made</span>
-    [ <a href="" ng-click="archive()">archive</a> ]
-    <ul class="unstyled">
-      <li ng-repeat="spoon in spoons">
-        <input type="checkbox" ng-model="spoon.done">
-        <span class="done-{{spoon.done}}">{{spoon.firstWord}}  {{spoon.secondWord}}</span>
-      </li>
-    </ul>
-  
-    
-
-  <div class="span8">
-    Level 1 column
-    <div class="row">
-      <div class="span3">Level 2</div>
-      <div class="span3">Level 2</div>
-    </div>
-  </div>
-</div>
-  </div>
-</div>
 
   <script src="js/controllers.js"></script>
   </body>

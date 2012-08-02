@@ -8,6 +8,7 @@ function SpoonController($scope) {
         secondWord: 'wang'}];
 
     $scope.addSpoon = function() {
+//Placing vars when initialized not all at once
 
         var first = $scope.spoonText;
         var second = $scope.spoonText2;
